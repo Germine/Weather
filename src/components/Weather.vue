@@ -111,7 +111,7 @@ export default {
 	        .then((result) => {
 	        	let wea = result.body.HeWeather6[0].now;
 	            // console.log(wea)
-				this.$set(this.nowWea,'wcode','static/wea'+wea.cond_code+'.png');
+				this.$set(this.nowWea,'wcode','static/'+wea.cond_code+'.png');
 				this.$set(this.nowWea,'txt',wea.cond_txt);
 				this.$set(this.nowWea,'tmp',wea.tmp);
 				this.$set(this.nowWea,'hum',wea.hum);
@@ -263,12 +263,10 @@ export default {
 			width: 0.8rem;
 			height: 0.8rem;
 
-			padding-left: 50px;
-			overflow: hidden;
 			img{
-			    width:0.8rem;
-			    height:0.8rem;
-			    filter: drop-shadow(-50px 0px 0rem rgb(255,255,255));
+			    width:100%;
+			    height:100%;
+
 			}
 		}
 
@@ -356,12 +354,9 @@ export default {
 				width: 0.8rem;
 				height: 0.8rem;
 
-				padding-left: 50px;
-				overflow: hidden;
 				img{
-				    width:0.8rem;
-				    height:0.8rem;
-				    filter: drop-shadow(-50px 0px 0rem rgb(255,255,255));
+				    width:100%;
+				    height:100%;
 				}
 			}
 		}
